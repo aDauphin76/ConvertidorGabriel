@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+     //Colores de la App
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+
+
+    //colores categorias
+    <color name="categoria_peso">#4591B0</color>
+    <color name="categoria_distancia">#E6B034</color>
+    <color name="categoria_volumen">#489A54</color>
+    <color name="categoria_cocina">#7E5536</color>
+    <color name="categoria_temperatura">#DD4837</color>
+    <color name="categoria_presion">#2B2A95</color>
+
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/pesoTV"
+        style="@style/CategoryStyle"
+        android:background="@color/categoria_peso"
+        android:text="@string/peso" />
+
+    <TextView
+        android:id="@+id/distancia"
+        style="@style/CategoryStyle"
+        android:background="@color/categoria_distancia"
+        android:text="@string/distancia" />
+
+    <TextView
+        android:id="@+id/volumen"
+        style="@style/CategoryStyle"
+        android:background="@color/categoria_volumen"
+        android:text="@string/volumen" />
+
+    <TextView
+        android:id="@+id/cocina"
+        style="@style/CategoryStyle"
+        android:background="@color/categoria_cocina"
+        android:text="@string/cocina" />
+
+    <TextView
+        android:id="@+id/temperatura"
+        style="@style/CategoryStyle"
+        android:background="@color/categoria_temperatura"
+        android:text="@string/temperatura" />
+
+    <TextView
+        android:id="@+id/presion"
+        style="@style/CategoryStyle"
+        android:background="@color/categoria_presion"
+        android:text="@string/presion" />
+
+
+
+</LinearLayout>
