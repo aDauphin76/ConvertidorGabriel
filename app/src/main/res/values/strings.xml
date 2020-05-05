@@ -6,4 +6,27 @@
     <string name="cocina">Cocina</string>
     <string name="presion">Presion</string>
     <string name="temperatura">Temperatura</string>
+    <string name="ingrese_valor">Ingrese Valor</string>
+    <string name="SeCorrioCreate">Se corrió onCreate</string>
+    <string name="kilogramos">Kilogramos</string>
+    <string name="libras">Libras</string>
+    <string name="onzas">Onzas</string>
+    <string name="piedras">Piedras</string>
+    <string name="toneladas">Toneladas</string>
+    <string name="quintales">Quintales</string>
+    <string name="gramos">Gramos</string>
+    <string name="miligramos">Miligramos</string>
+    <string name="calcular_pesos">Calcular Pesos</string>
+    <string name="kg">Kg</string>
+    <string name="g">g</string>
+    <string name="mg">mg</string>
+    <string name="t_metrica">T(Metrica)</string>
+    <string name="t_imperial">T(Imperial)</string>
+    <string name="oz">Oz</string>
+    <string name="de">De:</string>
+    <string name="a">A:</string>
+    <string name="convertir">convertir</string>
+    <string name="ingrese_un_valor">Ingrese un valor</string>
+
+
 </resources>
