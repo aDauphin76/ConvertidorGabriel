@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Peso"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ingrese_un_valor"
+        android:id="@+id/etEntradaPeso"
+        android:inputType="numberDecimal"
+        android:layout_margin="10dp"
+        android:importantForAutofill="no" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:layout_weight="1">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            tools:ignore="NestedWeights">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/CategoryStyle"
+                android:background="@color/categoria_peso"
+                android:text="@string/de"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kg"
+                android:id="@+id/rbKGDE"
+                android:onClick="SelecionadoDE"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/g"
+                android:id="@+id/rbGDE"
+                android:onClick="SelecionadoDE"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mg"
+                android:id="@+id/rbMGDE"
+                android:onClick="SelecionadoDE"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/t_metrica"
+                android:id="@+id/rbTMDE"
+                android:onClick="SelecionadoDE"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/t_imperial"
+                android:id="@+id/rbTIDE"
+                android:onClick="SelecionadoDE"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/libras"
+                android:id="@+id/rbLIBRADE"
+                android:onClick="SelecionadoDE"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/oz"
+                android:id="@+id/rbOZDE"
+                android:onClick="SelecionadoDE"/>
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/CategoryStyle"
+                android:background="@color/categoria_peso"
+                android:text="@string/a"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kg"
+                android:id="@+id/rbKGA"
+                android:onClick="SelecionadoA"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/g"
+                android:id="@+id/rbGA"
+                android:onClick="SelecionadoA"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mg"
+                android:id="@+id/rbMGA"
+                android:onClick="SelecionadoA"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/t_metrica"
+                android:id="@+id/rbTMA"
+                android:onClick="SelecionadoA"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/t_imperial"
+                android:id="@+id/rbTIA"
+                android:onClick="SelecionadoA"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/libras"
+                android:id="@+id/rbLIBRAA"
+                android:onClick="SelecionadoA"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/oz"
+                android:id="@+id/rbOZA"
+                android:onClick="SelecionadoA"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CategoryStyle"
+        android:background="@color/categoria_peso"
+        android:layout_margin="10dp"
+        android:id="@+id/tvResultadoPeso"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="convertirPeso"
+        android:layout_margin="10dp"
+        android:text="@string/convertir"
+        android:enabled="false"
+        android:layout_gravity="end"
+        android:id="@+id/bConvertir"
+        />
+</LinearLayout>
