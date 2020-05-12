@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Tema basico -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -15,5 +15,13 @@
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAppearance">?android:textAppearanceMedium</item>
+    </style>
+
+    <style name="rbStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/background_light</item>
+        <item name="android:buttonTint" tools:targetApi="lollipop">@android:color/black</item>
     </style>
     </resources>
