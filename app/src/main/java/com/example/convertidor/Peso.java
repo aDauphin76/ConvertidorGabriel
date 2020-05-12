@@ -2,46 +2,33 @@ package com.example.convertidor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class Peso extends AppCompatActivity {
 
-    EditText etEntradaPeso;
-    Button bConvertir;
+    // Button bConvertir;
     RadioButton rbKGDE, rbGDE, rbMGDE, rbTMDE, rbTIDE, rbLIBRADE,rbOZDE, rbKGA, rbGA, rbMGA, rbTMA,
             rbTIA, rbLIBRAA, rbOZA;
-    Float intermedioDe;
-    Float resultadoA;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_peso);
 
-        etEntradaPeso   = findViewById(R.id.etEntradaPeso);
-        bConvertir      = findViewById(R.id.bConvertir);
+        // bConvertir      = findViewById(R.id.bConvertir);
 
     }
 
-    public void SelecionadoDE(View view) {
+    public void SelecionadoDE() {
 
-        String entradaPesoSTR   = etEntradaPeso.getText().toString();
-
-        if(entradaPesoSTR.isEmpty()){
-            Toast.makeText(getApplicationContext(),"El valor debe ser mayor a 0",
-                    Toast.LENGTH_LONG).show();
-            return;
-        }
-
-        boolean checked = ((RadioButton) view).isChecked();
-        Float entradaPesoFLT    = Float.parseFloat(entradaPesoSTR);
+        RadioGroup rgDE = findViewById(R.id.rgDE);
+        int intSeleccionadoDeID     = rgDE.getCheckedRadioButtonId();
 
         rbKGA       = findViewById(R.id.rbKGA);
         rbGA        = findViewById(R.id.rbGA);
@@ -54,54 +41,33 @@ public class Peso extends AppCompatActivity {
         habilitarTodos(1);
 
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch(intSeleccionadoDeID) {
             case R.id.rbKGDE:
-                if (checked){
-                    intermedioDe = entradaPesoFLT;
-                    rbKGA.setEnabled(false);
-                }
+                rbKGA.setEnabled(false);
                 break;
 
             case R.id.rbGDE:
-                if (checked){
-                    intermedioDe = entradaPesoFLT / 1000;
-                    rbGA.setEnabled(false);
-                }
+                rbGA.setEnabled(false);
                 break;
 
             case R.id.rbMGDE:
-                if (checked){
-                    intermedioDe = entradaPesoFLT / 1000000;
-                    rbMGA.setEnabled(false);
-                }
+                rbMGA.setEnabled(false);
                 break;
 
             case R.id.rbTMDE:
-                if (checked){
-                    intermedioDe = entradaPesoFLT * 1000;
-                    rbTMA.setEnabled(false);
-                }
+                rbTMA.setEnabled(false);
                 break;
 
             case R.id.rbTIDE:
-                if (checked){
-                    intermedioDe = entradaPesoFLT * 907.03f;
-                    rbTIA.setEnabled(false);
-                }
+                rbTIA.setEnabled(false);
                 break;
 
             case R.id.rbLIBRADE:
-                if (checked){
-                    intermedioDe = entradaPesoFLT / 2.205f;
-                    rbLIBRAA.setEnabled(false);
-                }
+                rbLIBRAA.setEnabled(false);
                 break;
 
             case R.id.rbOZDE:
-                if (checked){
-                    intermedioDe = entradaPesoFLT * 0.02835f;
-                    rbOZA.setEnabled(false);
-                }
+                rbOZA.setEnabled(false);
                 break;
         }
     }
@@ -126,17 +92,10 @@ public class Peso extends AppCompatActivity {
         }
     }
 
+    public void SelecionadoA() {
 
-    public void SelecionadoA(View view) {
-
-        if(intermedioDe == null){
-            Toast.makeText(getApplicationContext(),"El valor debe ser mayor a 0",
-                    Toast.LENGTH_LONG).show();
-            return;
-        }
-
-        bConvertir.setEnabled(true);
-        boolean checked = ((RadioButton) view).isChecked();
+        RadioGroup rgA  = findViewById(R.id.rgA);
+        int intSeleccionadoAID      = rgA.getCheckedRadioButtonId();
 
         rbKGDE      = findViewById(R.id.rbKGDE);
         rbGDE       = findViewById(R.id.rbGDE);
@@ -149,64 +108,157 @@ public class Peso extends AppCompatActivity {
         habilitarTodos(0);
 
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch(intSeleccionadoAID) {
 
             case R.id.rbKGA:
-                if (checked){
-                    resultadoA = intermedioDe;
-                    rbKGDE.setEnabled(false);
-                }
+                rbKGDE.setEnabled(false);
                 break;
 
             case R.id.rbGA:
-                if (checked){
-                    resultadoA = intermedioDe * 1000;
-                    rbGDE.setEnabled(false);
-                }
+                rbGDE.setEnabled(false);
                 break;
 
             case R.id.rbMGA:
-                if (checked){
-                    resultadoA = intermedioDe * 1000000;
-                    rbMGDE.setEnabled(false);
-                }
+                rbMGDE.setEnabled(false);
                 break;
 
             case R.id.rbTMA:
-                if (checked){
-                    resultadoA = intermedioDe / 1000;
-                    rbTMDE.setEnabled(false);
-                }
+                rbTMDE.setEnabled(false);
                 break;
 
             case R.id.rbTIA:
-                if (checked){
-                    resultadoA = intermedioDe / 907.03f;
-                    rbTIDE.setEnabled(false);
-                }
+                rbTIDE.setEnabled(false);
                 break;
 
             case R.id.rbLIBRAA:
-                if (checked){
-                    resultadoA = intermedioDe * 2.205f;
-                    rbLIBRADE.setEnabled(false);
-                }
+                rbLIBRADE.setEnabled(false);
                 break;
 
             case R.id.rbOZA:
-                if (checked){
-                    resultadoA = intermedioDe / 0.02835f;
-                    rbOZDE.setEnabled(false);
-                }
+                rbOZDE.setEnabled(false);
                 break;
         }
     }
 
-    @SuppressLint("SetTextI18n")
-    public void convertirPeso(View view) {
+    public void onClick(View view) {
+
+
+        switch(view.getId()) {
+            case R.id.bConvertir:
+                ConvertirPeso();
+                break;
+            case R.id.rbKGDE:
+            case R.id.rbGDE:
+            case R.id.rbMGDE:
+            case R.id.rbTMDE:
+            case R.id.rbTIDE:
+            case R.id.rbLIBRADE:
+            case R.id.rbOZDE:
+                SelecionadoDE();
+                break;
+            case R.id.rbKGA:
+            case R.id.rbGA:
+            case R.id.rbMGA:
+            case R.id.rbTMA:
+            case R.id.rbTIA:
+            case R.id.rbLIBRAA:
+            case R.id.rbOZA:
+                SelecionadoA();
+                break;
+        }
+
+    }
+
+    private void ConvertirPeso() {
+
+        EditText etEntradaPeso = findViewById(R.id.etEntradaPeso);
+
+        String strEntradaPeso   = etEntradaPeso.getText().toString();
+        if(strEntradaPeso.isEmpty()){
+            Toast.makeText(getApplicationContext(),"El valor debe ser mayor a 0",
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
+        Float entradaPesoFLT    = Float.parseFloat(strEntradaPeso);
+
+        RadioGroup rgDE = findViewById(R.id.rgDE);
+        int intSeleccionadoDeID     = rgDE.getCheckedRadioButtonId();
+
+        RadioGroup rgA  = findViewById(R.id.rgA);
+        int intSeleccionadoAID      = rgA.getCheckedRadioButtonId();
+
+        Float intermedioDe;
+        switch(intSeleccionadoDeID) {
+            case R.id.rbKGDE:
+                intermedioDe = entradaPesoFLT;
+                break;
+
+            case R.id.rbGDE:
+                intermedioDe = entradaPesoFLT / 1000;
+                break;
+
+            case R.id.rbMGDE:
+                intermedioDe = entradaPesoFLT / 1000000;
+                break;
+
+            case R.id.rbTMDE:
+                intermedioDe = entradaPesoFLT * 1000;
+                break;
+
+            case R.id.rbTIDE:
+                intermedioDe = entradaPesoFLT * 907.03f;
+                break;
+
+            case R.id.rbLIBRADE:
+                intermedioDe = entradaPesoFLT / 2.205f;
+                break;
+
+            case R.id.rbOZDE:
+                intermedioDe = entradaPesoFLT * 0.02835f;
+                break;
+            default:
+                intermedioDe = 0f;
+                break;
+        }
+
+        Float resultadoA;
+
+        switch(intSeleccionadoAID) {
+
+            case R.id.rbKGA:
+                resultadoA = intermedioDe;
+                break;
+
+            case R.id.rbGA:
+                resultadoA = intermedioDe * 1000;
+                break;
+
+            case R.id.rbMGA:
+                resultadoA = intermedioDe * 1000000;
+                break;
+
+            case R.id.rbTMA:
+                resultadoA = intermedioDe / 1000;
+                break;
+
+            case R.id.rbTIA:
+                resultadoA = intermedioDe / 907.03f;
+                break;
+
+            case R.id.rbLIBRAA:
+                resultadoA = intermedioDe * 2.205f;
+                break;
+
+            case R.id.rbOZA:
+                resultadoA = intermedioDe / 0.02835f;
+                break;
+            default:
+                resultadoA = 0f;
+                break;
+        }
+
 
         TextView tvResultadoPeso = findViewById(R.id.tvResultadoPeso);
-
         tvResultadoPeso.setText(resultadoA.toString());
     }
 }
