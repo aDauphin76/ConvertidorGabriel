@@ -24,8 +24,9 @@
 
         <RadioGroup
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight=".5"
+            android:id="@+id/rgDE"
             tools:ignore="NestedWeights">
 
             <TextView
@@ -36,58 +37,75 @@
                 android:text="@string/de"/>
 
             <RadioButton
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/kg"
+                android:checked="true"
+                android:onClick="onClick"
                 android:id="@+id/rbKGDE"
-                android:onClick="SelecionadoDE"/>
+                android:layout_weight="1"
+                />
 
             <RadioButton
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:enabled="false"
                 android:text="@string/g"
+                android:onClick="onClick"
                 android:id="@+id/rbGDE"
-                android:onClick="SelecionadoDE"/>
+                android:layout_weight="1"
+                />
 
             <RadioButton
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/mg"
+                android:onClick="onClick"
                 android:id="@+id/rbMGDE"
-                android:onClick="SelecionadoDE"/>
+                android:layout_weight="1"
+                />
 
             <RadioButton
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/t_metrica"
+                android:onClick="onClick"
                 android:id="@+id/rbTMDE"
-                android:onClick="SelecionadoDE"/>
+                android:layout_weight="1"
+                />
 
             <RadioButton
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/t_imperial"
+                android:onClick="onClick"
                 android:id="@+id/rbTIDE"
-                android:onClick="SelecionadoDE"/>
+                android:layout_weight="1"
+                />
 
             <RadioButton
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/libras"
+                android:onClick="onClick"
                 android:id="@+id/rbLIBRADE"
-                android:onClick="SelecionadoDE"/>
+                android:layout_weight="1"
+                />
 
             <RadioButton
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/oz"
+                android:onClick="onClick"
                 android:id="@+id/rbOZDE"
-                android:onClick="SelecionadoDE"/>
+                android:layout_weight="1"
+                />
         </RadioGroup>
 
         <RadioGroup
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/rgA"
             android:layout_weight=".5">
 
             <TextView
@@ -98,53 +116,69 @@
                 android:text="@string/a"/>
 
             <RadioButton
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/kg"
+                android:enabled="false"
+                android:onClick="onClick"
+                android:layout_weight=".2"
                 android:id="@+id/rbKGA"
-                android:onClick="SelecionadoA"/>
+                />
 
             <RadioButton
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:text="@string/g"
+                android:onClick="onClick"
+                android:layout_weight=".2"
                 android:id="@+id/rbGA"
-                android:onClick="SelecionadoA"/>
+                />
 
             <RadioButton
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/mg"
+                android:onClick="onClick"
+                android:layout_weight=".2"
                 android:id="@+id/rbMGA"
-                android:onClick="SelecionadoA"/>
+                />
 
             <RadioButton
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/t_metrica"
+                android:onClick="onClick"
+                android:layout_weight=".2"
                 android:id="@+id/rbTMA"
-                android:onClick="SelecionadoA"/>
+                />
 
             <RadioButton
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/t_imperial"
+                android:onClick="onClick"
+                android:layout_weight=".2"
                 android:id="@+id/rbTIA"
-                android:onClick="SelecionadoA"/>
+                />
 
             <RadioButton
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/libras"
+                android:onClick="onClick"
+                android:layout_weight=".2"
                 android:id="@+id/rbLIBRAA"
-                android:onClick="SelecionadoA"/>
+                />
 
             <RadioButton
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/oz"
+                android:onClick="onClick"
+                android:layout_weight=".2"
                 android:id="@+id/rbOZA"
-                android:onClick="SelecionadoA"/>
+                />
         </RadioGroup>
 
     </LinearLayout>
@@ -160,10 +194,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="convertirPeso"
+        android:onClick="onClick"
         android:layout_margin="10dp"
         android:text="@string/convertir"
-        android:enabled="false"
         android:layout_gravity="end"
         android:id="@+id/bConvertir"
         />
