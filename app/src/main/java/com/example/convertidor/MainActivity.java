@@ -35,9 +35,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void LanzarPeso(View view) {
-        Intent lanzarPeso = new Intent(MainActivity.this,Peso.class);
-        startActivity(lanzarPeso);
-
+    public void onClick(View view) {
+        switch(view.getId()) {
+            case R.id.tvPeso:
+                Intent lanzarPeso = new Intent(MainActivity.this, Peso.class);
+                startActivity(lanzarPeso);
+                break;
+            case R.id.tvPresion:
+                Intent lanzarPresion = new Intent(MainActivity.this, Presion.class);
+                startActivity(lanzarPresion);
+                break;
+        }
     }
 }

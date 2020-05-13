@@ -175,7 +175,7 @@ public class Peso extends AppCompatActivity {
 
         String strEntradaPeso   = etEntradaPeso.getText().toString();
         if(strEntradaPeso.isEmpty()){
-            Toast.makeText(getApplicationContext(),"El valor debe ser mayor a 0",
+            Toast.makeText(getApplicationContext(), R.string.valida_valor,
                     Toast.LENGTH_LONG).show();
             return;
         }
@@ -189,9 +189,6 @@ public class Peso extends AppCompatActivity {
 
         Float intermedioDe;
         switch(intSeleccionadoDeID) {
-            case R.id.rbKGDE:
-                intermedioDe = entradaPesoFLT;
-                break;
 
             case R.id.rbGDE:
                 intermedioDe = entradaPesoFLT / 1000;
@@ -216,18 +213,14 @@ public class Peso extends AppCompatActivity {
             case R.id.rbOZDE:
                 intermedioDe = entradaPesoFLT * 0.02835f;
                 break;
-            default:
-                intermedioDe = 0f;
+            default: // KG rbKGDE
+                intermedioDe = entradaPesoFLT;
                 break;
         }
 
         Float resultadoA;
 
         switch(intSeleccionadoAID) {
-
-            case R.id.rbKGA:
-                resultadoA = intermedioDe;
-                break;
 
             case R.id.rbGA:
                 resultadoA = intermedioDe * 1000;
@@ -252,8 +245,8 @@ public class Peso extends AppCompatActivity {
             case R.id.rbOZA:
                 resultadoA = intermedioDe / 0.02835f;
                 break;
-            default:
-                resultadoA = 0f;
+            default: // KG rbKGA
+                resultadoA = intermedioDe;
                 break;
         }
 

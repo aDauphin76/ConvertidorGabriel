@@ -9,11 +9,11 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/pesoTV"
+        android:id="@+id/tvPeso"
         style="@style/CategoryStyle"
         android:background="@color/categoria_peso"
         android:text="@string/peso"
-        android:onClick="LanzarPeso"/>
+        />
 
     <TextView
         android:id="@+id/distancia"
@@ -40,11 +40,9 @@
         android:text="@string/temperatura" />
 
     <TextView
-        android:id="@+id/presion"
+        android:id="@+id/tvPresion"
         style="@style/CategoryStyle"
         android:background="@color/categoria_presion"
         android:text="@string/presion" />
-
-
 
 </LinearLayout>
