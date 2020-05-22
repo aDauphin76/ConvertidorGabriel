@@ -16,25 +16,25 @@
         />
 
     <TextView
-        android:id="@+id/distancia"
+        android:id="@+id/tvDistancia"
         style="@style/CategoryStyle"
         android:background="@color/categoria_distancia"
         android:text="@string/distancia" />
 
     <TextView
-        android:id="@+id/volumen"
+        android:id="@+id/tvVolumen"
         style="@style/CategoryStyle"
         android:background="@color/categoria_volumen"
         android:text="@string/volumen" />
 
     <TextView
-        android:id="@+id/cocina"
+        android:id="@+id/tvCocina"
         style="@style/CategoryStyle"
         android:background="@color/categoria_cocina"
         android:text="@string/cocina" />
 
     <TextView
-        android:id="@+id/temperatura"
+        android:id="@+id/tvTemperatura"
         style="@style/CategoryStyle"
         android:background="@color/categoria_temperatura"
         android:text="@string/temperatura" />

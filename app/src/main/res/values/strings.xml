@@ -28,6 +28,7 @@
     <string name="convertir">convertir</string>
     <string name="ingrese_un_valor">Ingrese un valor</string>
     <string name="valida_valor">El valor debe ser mayor a 0</string>
+    <string name="busqueda">Busqueda</string>
 
 
 </resources>

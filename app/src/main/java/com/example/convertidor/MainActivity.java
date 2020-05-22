@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,15 +37,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
+        Intent lanzar = null;
         switch(view.getId()) {
             case R.id.tvPeso:
-                Intent lanzarPeso = new Intent(MainActivity.this, Peso.class);
-                startActivity(lanzarPeso);
+                lanzar = new Intent(MainActivity.this, Peso.class);
                 break;
             case R.id.tvPresion:
-                Intent lanzarPresion = new Intent(MainActivity.this, Presion.class);
-                startActivity(lanzarPresion);
+                lanzar = new Intent(MainActivity.this, Presion.class);
+                break;
+            case R.id.tvCocina:
+                lanzar = new Intent(MainActivity.this, Cocina.class);
+                break;
+            default:
+                Toast.makeText(getApplicationContext(),"No implementado aún",Toast.LENGTH_SHORT).show();
                 break;
         }
+        if (lanzar != null) startActivity(lanzar);
+
     }
 }
