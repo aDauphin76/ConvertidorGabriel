@@ -20,13 +20,9 @@
             android:id="@+id/imagenCocina"
             />
         <TextView
+            style="@style/CocinaFilaStyle"
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
             android:id="@+id/tvNombreUnidad"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:padding="10dp"
-            android:layout_gravity="center"
             tools:text="Harina"/>
 
         <TextView

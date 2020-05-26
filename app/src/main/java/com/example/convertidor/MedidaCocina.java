@@ -1,6 +1,8 @@
 package com.example.convertidor;
 
-public class MedidaCocina {
+import java.io.Serializable;
+
+public class MedidaCocina implements Serializable {
     private String nombre;
     private String medida1;
     private String medida2;

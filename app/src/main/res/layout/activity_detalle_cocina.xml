@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="30dp"
+    tools:context=".DetalleCocina"
+    >
+    <TextView
+        style="@style/DetalleCocinaStyle"
+        android:layout_weight="0"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="30dp"
+        tools:text="Harina"
+        android:id="@+id/tvDetalleCocinaNombre"
+        />
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="30dp"
+        tools:src="@drawable/flour"
+        android:id="@+id/imagenDetalleCocina"
+        android:contentDescription="@string/todo" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:text="@string/_1_taza"
+            style="@style/DetalleCocinaStyle"
+            />
+        <TextView
+            android:text="@string/_1_2_taza"
+            style="@style/DetalleCocinaStyle"
+            />
+        <TextView
+            android:text="@string/_1_4_taza"
+            style="@style/DetalleCocinaStyle"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            style="@style/DetalleCocinaStyle"
+            tools:text="150g"
+            android:id="@+id/tvDetalleCocinaMedida1"
+            />
+        <TextView
+            style="@style/DetalleCocinaStyle"
+            tools:text="120g"
+            android:id="@+id/tvDetalleCocinaMedida2"
+            />
+        <TextView
+            style="@style/DetalleCocinaStyle"
+            tools:text="100g"
+            android:id="@+id/tvDetalleCocinaMedida3"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

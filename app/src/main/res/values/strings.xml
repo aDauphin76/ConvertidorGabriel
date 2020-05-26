@@ -29,6 +29,10 @@
     <string name="ingrese_un_valor">Ingrese un valor</string>
     <string name="valida_valor">El valor debe ser mayor a 0</string>
     <string name="busqueda">Busqueda</string>
+    <string name="_1_taza">1 Taza</string>
+    <string name="_1_2_taza">1/2 Taza</string>
+    <string name="_1_4_taza">1/4 Taza</string>
+    <string name="todo">TODO</string>
 
 
 </resources>
